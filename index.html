@@ -3,33 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MMJ Enterprise</title>
+    <title>Miguel Jose | Portfolio</title>
+    <meta name="description" content="Portfolio of Miguel Jose — multimedia specialist and video editor. Explore my video editing and 3D creative work.">
+    <meta property="og:title" content="Miguel Jose | Portfolio">
+    <meta property="og:description" content="Portfolio of Miguel Jose — multimedia specialist and video editor. Explore my video editing and 3D creative work.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="MWM.png">
+    <link rel="icon" type="image/png" href="MWM.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="banner">
-        <video autoplay loop muted playsinline class="back-video" oncontextmenu="return false;">
+        <video autoplay loop muted playsinline preload="metadata" poster="background.png" class="back-video" oncontextmenu="return false;">
             <source src="spacevrc1.mp4" type="video/mp4">
         </video>
 
         <div class="navbar">
             <img src="MWM.png" class="logo" alt="Company Logo">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="creations.html">Creations</a></li>
             </ul>
         </div>
 
         <div class="content">
             <h1>PORTFOLIO PROJECT</h1>
             <p>"And I tell you, ask and it will be given to you; seek<br>and you will find; knock and the door will be opened to you." <br><br>-Luke 11:9</p>
-            
+
             <div>
-                <!-- Rental Availability button has been removed -->
                 <a href="creations.html" class="button-link"><span></span>MY CREATIONS</a>
             </div>
         </div>
     </div>
 
+    <footer class="site-footer">
+        <p>&copy; 2026 Miguel Jose. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

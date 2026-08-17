@@ -57,6 +57,18 @@ body {
     width: 100%;
 }
 
+/* Hide video background on small screens to save mobile data; a static
+   image takes over via .banner's background (see mobile media query). */
+@media (max-width: 600px) {
+    .back-video {
+        display: none;
+    }
+
+    .banner {
+        background: url('background.png') center/cover no-repeat;
+    }
+}
+
 .content {
     width: 100%;
     position: absolute;
@@ -145,6 +157,92 @@ body {
 .top-nav ul li a:hover {
     color: #009688;
     transition: 0.3s;
+}
+
+/* === MOBILE NAVIGATION === */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .navbar ul, .top-nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        margin: 0;
+        padding: 100px 0 0;
+        background: #0c0f18;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.4);
+        transition: right 0.4s;
+        z-index: 2;
+    }
+
+    .navbar ul.active, .top-nav ul.active {
+        right: 0;
+    }
+
+    .navbar ul li, .top-nav ul li {
+        margin: 15px 0;
+    }
+}
+
+/* === FOOTER === */
+.site-footer {
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer a {
+    color: #009688;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
 }
 
 

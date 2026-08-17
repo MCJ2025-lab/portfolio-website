@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Creations - Portfolio</title>
+    <title>Creations - Miguel Jose | Portfolio</title>
+    <meta name="description" content="A showcase of Miguel Jose's video editing and multimedia projects made with Adobe After Effects and Premiere Pro.">
+    <meta property="og:title" content="Creations - Miguel Jose | Portfolio">
+    <meta property="og:description" content="A showcase of Miguel Jose's video editing and multimedia projects made with Adobe After Effects and Premiere Pro.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="MWM.png">
+    <link rel="icon" type="image/png" href="MWM.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="top-nav">
         <a href="index.html"><img src="MWM.png" class="logo" alt="Company Logo"></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="creations.html">Creations</a></li>
         </ul>
     </nav>
 
@@ -23,7 +33,7 @@
         <div class="gallery-grid">
             <!-- Video 1 -->
             <div class="video-item">
-                <video class="showcase-video" controls oncontextmenu="return false;" controlslist="nodownload">
+                <video class="showcase-video" controls preload="metadata" oncontextmenu="return false;" controlslist="nodownload">
                     <source src="vid1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -31,7 +41,7 @@
             </div>
             <!-- Video 2 -->
             <div class="video-item">
-                <video class="showcase-video" controls oncontextmenu="return false;" controlslist="nodownload">
+                <video class="showcase-video" controls preload="metadata" oncontextmenu="return false;" controlslist="nodownload">
                     <source src="vid2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -39,7 +49,7 @@
             </div>
             <!-- Video 3 -->
             <div class="video-item">
-                <video class="showcase-video" controls oncontextmenu="return false;" controlslist="nodownload">
+                <video class="showcase-video" controls preload="metadata" oncontextmenu="return false;" controlslist="nodownload">
                     <source src="vid3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -47,7 +57,7 @@
             </div>
             <!-- Video 4 -->
             <div class="video-item">
-                <video class="showcase-video" controls oncontextmenu="return false;" controlslist="nodownload">
+                <video class="showcase-video" controls preload="metadata" oncontextmenu="return false;" controlslist="nodownload">
                     <source src="vid4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -56,5 +66,10 @@
         </div>
     </div>
 
+    <footer class="site-footer">
+        <p>&copy; 2026 Miguel Jose. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
