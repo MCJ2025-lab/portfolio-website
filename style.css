@@ -407,8 +407,57 @@ body {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .profile-text {
         text-align: center;
     }
+}
+
+/* === PROJECTS PAGE STYLES === */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 340px;
+    flex-grow: 1;
+    text-align: left;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    border-color: #009688;
+    box-shadow: 0 0 25px rgba(0, 150, 136, 0.35);
+    transform: translateY(-4px);
+}
+
+.project-card h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #009688;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-card .button-link {
+    align-self: flex-start;
+    width: auto;
+    padding: 12px 25px;
+    margin: 0;
 }
