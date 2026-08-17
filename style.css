@@ -35,7 +35,7 @@ body {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    z-index: 2;
+    z-index: 1010;
 }
 
 .navbar ul li a {
@@ -197,32 +197,56 @@ body {
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
+        position: relative;
+        z-index: 1001;
     }
 
     .navbar ul, .top-nav ul {
         position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        max-width: 300px;
-        height: 100vh;
+        top: 85px;
+        right: 20px;
+        left: auto;
+        width: auto;
+        min-width: 180px;
+        max-width: 250px;
+        height: auto;
         margin: 0;
-        padding: 100px 0 0;
-        background: #0c0f18;
+        padding: 15px 0;
+        background: #12151f;
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.4);
-        transition: right 0.4s;
-        z-index: 9;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        transform: translateY(-12px) scale(0.96);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+        z-index: 1000;
+        isolation: isolate;
     }
 
     .navbar ul.active, .top-nav ul.active {
-        right: 0;
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .navbar ul li, .top-nav ul li {
-        margin: 15px 0;
+        margin: 10px 0;
+    }
+
+    .nav-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .nav-backdrop.active {
+        display: block;
     }
 }
 
